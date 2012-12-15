@@ -24,7 +24,7 @@ import (
 
 func getProxyDoc(client *http.Client, importPath, projectRoot, projectName, projectURL, etag string) (*Package, error) {
 
-	rc, err := httpGet(client, "http://go-get.danga.com/"+importPath)
+	rc, err := httpGet(client, "http://go-get-proxy.iprod.activestate.com/"+importPath)
 	if err != nil {
 		return nil, err
 	}
